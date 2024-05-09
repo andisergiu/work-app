@@ -17,13 +17,13 @@
                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <nav class="link-effect-2" id="link-effect-2">
                      <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.php" class="effect-3">Home</a></li>
+                        <li class="active"><a href="index.php" class="effect-3">Work</a></li>
+                        <li><a href="employee/login.php" class="effect-3">Angajat</a></li>
                         <li><a href="admin/login.php" class="effect-3">Admin</a></li>
-                        <li><a href="employee/login.php" class="effect-3">Employee</a></li>
                      </ul>
                   </nav>
                </div>
-               <!--/.navbar-collapse--><!-- js -->
+               <!--/.navbar-collapse-->
                <!--/.navbar-->
             </div>
          </nav>

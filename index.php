@@ -59,14 +59,14 @@ include('includes/dbconnection.php');
 			
 					<div class="clearfix"> </div>
 					
-                        <a href="index.php" class="effect-3">WORK</a><
-                        <a href="admin/login.php" class="effect-3">ADMIN</a>
-                        <a href="employee/login.php" class="effect-3">ANGAJAT</a>
+                        <a href="index.php">WORK</a>
+                        <a href="employee/login.php">ANGAJAT</a>
+                        <a href="admin/login.php">ADMIN</a>
                      
 				</div>
 				<div class="col-md-6 banner_bottom_right">
 					<div class="agileits_w3layouts_banner_bottom_grid">
-						<img src="images/ab.png" alt=" " class="img-responsive" />
+						<img src="images/generate-e1.jpeg" alt=" " class="img-responsive" />
 					</div>
 				</div>
 				<div class="clearfix"> </div>
