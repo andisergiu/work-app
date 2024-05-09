@@ -1297,8 +1297,9 @@ h3.agileinfo_sign {
 }
 
 .login-social-grids ul li a i.fa.fa-facebook,
-.login-social-grids ul li a i.fa.fa-twitter,
-.login-social-grids ul li a i.fa.fa-rss {
+.login-social-grids ul li a i.fa.fa-linkedin,
+.login-social-grids ul li a i.fa.fa-youtube,
+.login-social-grids ul li a i.fa.fa-instagram {
 	height: 30px;
 	width: 30px;
 	border: solid 2px #212121;
@@ -1318,13 +1319,19 @@ h3.agileinfo_sign {
 	color: #FFFFFF;
 }
 
-.login-social-grids ul li a i.fa.fa-twitter:hover {
+.login-social-grids ul li a i.fa.fa-instagram:hover {
+	border: solid 2px #f26522;
+	background: #f26522;
+	color: #FFFFFF;
+}
+
+.login-social-grids ul li a i.fa.fa-linkedin:hover {
 	border: solid 2px #55acee;
 	background: #55acee;
 	color: #FFFFFF;
 }
 
-.login-social-grids ul li a i.fa.fa-rss:hover {
+.login-social-grids ul li a i.fa.fa-youtube:hover {
 	border: solid 2px #f26522;
 	background: #f26522;
 	color: #FFFFFF;
@@ -2996,28 +3003,7 @@ ul.tag2:last-child {
 	color: #FFFFFF;
 }
 
-.social ul li a i.fa.fa-twitter {
-	height: 32px;
-	width: 32px;
-	line-height: 32px;
-	background: #FFFFFF;
-	color: #1da1f2;
-	transition: 0.5s all;
-	-webkit-transition: 0.5s all;
-	-moz-transition: 0.5s all;
-	-o-transition: 0.5s all;
-	-ms-transition: 0.5s all;
-}
-
-.social ul li a i.fa.fa-twitter:hover {
-	height: 32px;
-	width: 32px;
-	line-height: 32px;
-	background: #1da1f2;
-	color: #FFFFFF;
-}
-
-.social ul li a i.fa.fa-rss {
+.social ul li a i.fa.fa-instagram {
 	height: 32px;
 	width: 32px;
 	line-height: 32px;
@@ -3030,7 +3016,49 @@ ul.tag2:last-child {
 	-ms-transition: 0.5s all;
 }
 
-.social ul li a i.fa.fa-rss:hover {
+.social ul li a i.fa.fa-instagram:hover {
+	height: 32px;
+	width: 32px;
+	line-height: 32px;
+	background: #f26522;
+	color: #FFFFFF;
+}
+
+.social ul li a i.fa.fa-linkedin {
+	height: 32px;
+	width: 32px;
+	line-height: 32px;
+	background: #FFFFFF;
+	color: #1da1f2;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	-ms-transition: 0.5s all;
+}
+
+.social ul li a i.fa.fa-linkedin:hover {
+	height: 32px;
+	width: 32px;
+	line-height: 32px;
+	background: #1da1f2;
+	color: #FFFFFF;
+}
+
+.social ul li a i.fa.fa-youtube {
+	height: 32px;
+	width: 32px;
+	line-height: 32px;
+	background: #FFFFFF;
+	color: #f26522;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	-ms-transition: 0.5s all;
+}
+
+.social ul li a i.fa.fa-youtube:hover {
 	height: 32px;
 	width: 32px;
 	line-height: 32px;
@@ -3943,3 +3971,75 @@ ul.social-icons3.two li a {
 
 
 /*--//responsive--*/
+
+
+.butsas {
+	position: relative;
+	margin: 0;
+	padding: 5px 12px;
+	height: 60px;
+	width: 150px;
+	outline: none;
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	text-transform: uppercase;
+	background-color: #ffffff;
+	border: 1px solid rgba(22, 76, 167, 0.6);
+	border-radius: 10px;
+	color: #23b684;
+	font-weight: 400;
+	font-size: 20px;
+	font-family: inherit;
+	z-index: 0;
+	overflow: hidden;
+	transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+	span {
+	  color: #00A651;
+	  font-size: 12px;
+	  font-weight: 500;
+	  letter-spacing: 0.7px;
+	}
+	&:hover {
+	  animation: rotate 0.7s ease-in-out both;
+	  span {
+		animation: storm 0.7s ease-in-out both;
+		animation-delay: 0.06s;
+	  }
+	}
+  }
+  
+  .btn-slide-line {
+	&.center {
+	  &:after {
+		left: 50%;
+	  }
+	}
+	&:after {
+	  position: absolute;
+	  right: 0;
+	  left: auto;
+	  transition: .3s;
+	  content: '';
+	  width: 0;
+	  bottom: 0;
+	  height: 3px;
+	  background: #23b684;
+	}
+	&:hover {
+	  cursor: pointer;
+	  &:after {
+		width: 100%;
+		left: 0;
+	  }
+	}
+  }
+  
+  .inspire {
+	a {
+	  text-decoration: none;
+	}
+  }
+  

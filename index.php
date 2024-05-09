@@ -59,9 +59,9 @@ include('includes/dbconnection.php');
 			
 					<div class="clearfix"> </div>
 					
-                        <a href="index.php">WORK</a>
-                        <a href="employee/login.php">ANGAJAT</a>
-                        <a href="admin/login.php">ADMIN</a>
+                        <a class="butsas btn-slide-line" href="index.php">WORK</a><br>
+                        <a class="butsas btn-slide-line" href="employee/login.php">ANGAJAT</a><br>
+                        <a class="butsas btn-slide-line" href="admin/login.php">ADMIN</a><br>
                      
 				</div>
 				<div class="col-md-6 banner_bottom_right">
