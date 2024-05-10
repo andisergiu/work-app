@@ -71,7 +71,7 @@ return true;
                <div class="login_section">
                   <div class="logo_login">
                      <div class="center">
-                        <h3 style="color: white;">Employee Task Management System</h3>
+                        <h3 style="color: white;">WORK TASK NEXTLAB.TECH</h3>
                      </div>
                   </div>
                   <div class="login_form">

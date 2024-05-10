@@ -82,13 +82,13 @@ $query->execute();
                                     <table class="table table-bordered">
                                        <thead>
                                           <tr>
-                                             <th>S.No</th>
-                                             <th>Task Title</th>
-                                             <th>Department</th>
-                                             <th>Assign To</th>
-                                             <th>Assign Date</th>
-                                             <th>End Date</th>
-                                             <th>Action</th>
+                                             <th>NR</th>
+                                             <th>Titlu</th>
+                                             <th>Departament</th>
+                                             <th>Atribuit</th>
+                                             <th>Data atribuire</th>
+                                             <th>Data finalizare</th>
+                                             <th>Actiuni</th>
                                           </tr>
                                        </thead>
                                        <tbody>

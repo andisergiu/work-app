@@ -17,12 +17,12 @@ $query->bindParam(':deptname',$deptname,PDO::PARAM_STR);
 
    $LastInsertId=$dbh->lastInsertId();
    if ($LastInsertId>0) {
-    echo '<script>alert("Department has been added.")</script>';
+    echo '<script>alert("Departamentul a fost adaugat cu succes")</script>';
 echo "<script>window.location.href ='add-dept.php'</script>";
   }
   else
     {
-         echo '<script>alert("Something Went Wrong. Please try again")</script>';
+         echo '<script>alert("Eroare, te rog mai incearca")</script>';
     }
 
   
@@ -68,7 +68,7 @@ echo "<script>window.location.href ='add-dept.php'</script>";
                      <div class="row column_title">
                         <div class="col-md-12">
                            <div class="page_title">
-                              <h2>Add Department</h2>
+                              <h2>Adauga Departament</h2>
                            </div>
                         </div>
                      </div>
@@ -79,7 +79,7 @@ echo "<script>window.location.href ='add-dept.php'</script>";
                            <div class="white_shd full margin_bottom_30">
                               <div class="full graph_head">
                                  <div class="heading1 margin_0">
-                                    <h2>Add Department</h2>
+                                    <h2>Adauga Departament</h2>
                                  </div>
                               </div>
                               <div class="full progress_bar_inner">
@@ -92,7 +92,7 @@ echo "<script>window.location.href ='add-dept.php'</script>";
                         <fieldset>
                             
                            <div class="field">
-                              <label class="label_field">Department Name</label>
+                              <label class="label_field">Departament</label>
                               <input type="text" name="deptname" value="" class="form-control" required='true'>
                            </div>
                           

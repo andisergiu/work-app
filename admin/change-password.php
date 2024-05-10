@@ -26,9 +26,9 @@ $chngpwd1-> bindParam(':adminid', $adminid, PDO::PARAM_STR);
 $chngpwd1-> bindParam(':newpassword', $newpassword, PDO::PARAM_STR);
 $chngpwd1->execute();
 
-echo '<script>alert("Your password successully changed")</script>';
+echo '<script>alert("Parola ta a fost schimbata cu succes")</script>';
 } else {
-echo '<script>alert("Your current password is wrong")</script>';
+echo '<script>alert("Parola the curenta este gresita")</script>';
 
 }
 }
@@ -84,7 +84,7 @@ return true;
                      <div class="row column_title">
                         <div class="col-md-12">
                            <div class="page_title">
-                              <h2>Change Password</h2>
+                              <h2>Schimbare Parola</h2>
                            </div>
                         </div>
                      </div>
@@ -95,7 +95,7 @@ return true;
                            <div class="white_shd full margin_bottom_30">
                               <div class="full graph_head">
                                  <div class="heading1 margin_0">
-                                    <h2>Change Password</h2>
+                                    <h2>Schimbare Parola</h2>
                                  </div>
                               </div>
                               <div class="full progress_bar_inner">
@@ -107,17 +107,17 @@ return true;
                                                 <form method="post">
                         <fieldset>
                            <div class="field">
-                              <label class="label_field">Current Password</label>
+                              <label class="label_field">Parola Curenta</label>
                               <input type="password" name="currentpassword" id="currentpassword" class="form-control" required="true">
                            </div>
                            <br>
                            <div class="field">
-                              <label class="label_field">New Password</label>
+                              <label class="label_field">Parola Noua</label>
                               <input type="password" name="newpassword"  class="form-control" required="true">
                            </div>
                            <br>
                            <div class="field">
-                              <label class="label_field">Confirm Password</label>
+                              <label class="label_field">Confirmare Parola Noua</label>
                               <input type="password" name="confirmpassword" id="confirmpassword" value=""  class="form-control" required="true">
                            </div>
                            <br>

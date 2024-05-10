@@ -58,7 +58,7 @@ $query->bindParam(':eid',$eid,PDO::PARAM_STR);
                      <div class="row column_title">
                         <div class="col-md-12">
                            <div class="page_title">
-                              <h2>Update Department</h2>
+                              <h2>Update Departament</h2>
                            </div>
                         </div>
                      </div>
@@ -69,7 +69,7 @@ $query->bindParam(':eid',$eid,PDO::PARAM_STR);
                            <div class="white_shd full margin_bottom_30">
                               <div class="full graph_head">
                                  <div class="heading1 margin_0">
-                                    <h2>Update Department</h2>
+                                    <h2>Update Departament</h2>
                                  </div>
                               </div>
                               <div class="full progress_bar_inner">
@@ -93,7 +93,7 @@ foreach($results as $row)
                         <fieldset>
                             
                            <div class="field">
-                              <label class="label_field">Department Name</label>
+                              <label class="label_field">Departament</label>
                               <input type="text" name="deptname" value="<?php  echo htmlentities($row->DepartmentName);?>" class="form-control" required='true'>
                            </div>
                           <?php $cnt=$cnt+1;}} ?>

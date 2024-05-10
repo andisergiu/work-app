@@ -22,10 +22,10 @@ $chngpwd1-> bindParam(':email', $email, PDO::PARAM_STR);
 $chngpwd1-> bindParam(':mobile', $mobile, PDO::PARAM_STR);
 $chngpwd1-> bindParam(':newpassword', $newpassword, PDO::PARAM_STR);
 $chngpwd1->execute();
-echo "<script>alert('Your Password succesfully changed');</script>";
+echo "<script>alert('Parola a fost schimbata cu succes');</script>";
 }
 else {
-echo "<script>alert('Email id or Mobile no is invalid');</script>"; 
+echo "<script>alert('Email-ul sau numarul de telefon sunt invalide');</script>"; 
 }
 }
 
@@ -34,7 +34,7 @@ echo "<script>alert('Email id or Mobile no is invalid');</script>";
 <html lang="en">
    <head>
     
-      <title>Employee Task Management System || Forgot Page</title>
+      <title>WORK TASK NEXTLAB.TECH</title>
      
       <link rel="stylesheet" href="css/bootstrap.min.css" />
       <!-- site css -->
@@ -71,7 +71,7 @@ return true;
                <div class="login_section">
                   <div class="logo_login">
                      <div class="center">
-                        <h3 style="color: white;">Employee Task Management System</h3>
+                        <h3 style="color: white;">WORK TASK APP</h3>
                      </div>
                   </div>
                   <div class="login_form">
@@ -82,15 +82,15 @@ return true;
                               <input type="email" class="form-control" placeholder="Email" required="true" name="email">
                            </div>
                            <div class="field">
-                              <label class="label_field">Mobile Number</label>
+                              <label class="label_field">Telefon</label>
                              <input type="text" class="form-control" placeholder="Mobile Number" required="true" name="mobile" maxlength="10" pattern="[0-9]+">
                            </div>
                            <div class="field">
-                              <label class="label_field">New Password</label>
+                              <label class="label_field">Parola Noua</label>
                              <input type="password" class="form-control" name="newpassword" placeholder="New Password" required="true">
                            </div>
                            <div class="field">
-                              <label class="label_field">Confirm Password</label>
+                              <label class="label_field">Confirmare Parola</label>
                              <input type="password" class="form-control" name="confirmpassword" placeholder="Confirm Password" required="true">
                            </div>
                            <div class="field margin_0">

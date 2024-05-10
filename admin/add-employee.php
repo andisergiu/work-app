@@ -32,13 +32,13 @@ $query-> bindParam(':empcontno', $empcontno, PDO::PARAM_STR);
 $query-> execute();
 $results = $query -> fetchAll(PDO::FETCH_OBJ);
 if($query -> rowCount() > 0){
-echo "<script>alert('Employee Id or Email or Contact number alreadery registered with another emplyee');</script>";
+echo "<script>alert('Id-ul angajatului, email-ul sau numărul de telefon sunt deja înregistrate la un alt angajat');</script>";
 
    } else{
 
 if(!in_array($extension,$allowed_extensions))
 {
-echo "<script>alert('Pic has Invalid format. Only jpg / jpeg/ png /gif format allowed');</script>";
+echo "<script>alert('Poza are un format invalid. Este permis doar formatul jpg/jpeg/png/gif');</script>";
 }
 else
 {
@@ -67,12 +67,12 @@ $query->bindParam(':pic',$pic,PDO::PARAM_STR);
 
    $LastInsertId=$dbh->lastInsertId();
    if ($LastInsertId>0) {
-    echo '<script>alert("Employee detail has been added.")</script>';
+    echo '<script>alert("Angajatul a fost adaugat")</script>';
 echo "<script>window.location.href ='add-employee.php'</script>";
   }
   else
     {
-         echo '<script>alert("Something Went Wrong. Please try again")</script>';
+         echo '<script>alert("Eroare, te rog mai incearca")</script>';
     }
 
   
@@ -163,7 +163,7 @@ error:function (){}
                      <div class="row column_title">
                         <div class="col-md-12">
                            <div class="page_title">
-                              <h2>Add Employee</h2>
+                              <h2>Adauga Anagajat</h2>
                            </div>
                         </div>
                      </div>
@@ -174,7 +174,7 @@ error:function (){}
                            <div class="white_shd full margin_bottom_30">
                               <div class="full graph_head">
                                  <div class="heading1 margin_0">
-                                    <h2>Add Employee</h2>
+                                    <h2>Adauga Anagajat</h2>
                                  </div>
                               </div>
                               <div class="full progress_bar_inner">
@@ -187,23 +187,23 @@ error:function (){}
                         <fieldset>
                             
                            <div class="field">
-                              <label class="label_field">Department Name</label>
+                              <label class="label_field">Departament</label>
                               <select type="text" name="deptname" value="" class="form-control" required='true'>
-                                 <option value="">Select Department</option>
+                                 <option value="">Selectare Departament</option>
                                   <?php 
 
-$sql2 = "SELECT * from   tbldepartment ";
-$query2 = $dbh -> prepare($sql2);
-$query2->execute();
-$result2=$query2->fetchAll(PDO::FETCH_OBJ);
+                                    $sql2 = "SELECT * from   tbldepartment ";
+                                    $query2 = $dbh -> prepare($sql2);
+                                    $query2->execute();
+                                    $result2=$query2->fetchAll(PDO::FETCH_OBJ);
 
-foreach($result2 as $row2)
-{          
-    ?>  
-   
-<option value="<?php echo htmlentities($row2->ID);?>"><?php echo htmlentities($row2->DepartmentName
-    );?></option>
- <?php } ?>
+                                    foreach($result2 as $row2)
+                                    {          
+                                       ?>  
+                                       
+                                    <option value="<?php echo htmlentities($row2->ID);?>"><?php echo htmlentities($row2->DepartmentName
+                                       );?></option>
+                                    <?php } ?>
                               </select>
                            </div>
                           
@@ -211,7 +211,7 @@ foreach($result2 as $row2)
                            <br>
 
                            <div class="field">
-                              <label class="label_field">Employee ID</label>
+                              <label class="label_field">ID</label>
                               <input type="text" name="empid" id="empid" value="" class="form-control" required='true' onBlur="checkempidAvailability()">
                              
                            </div>
@@ -219,66 +219,66 @@ foreach($result2 as $row2)
 
                            <br>
                            <div class="field">
-                              <label class="label_field">Employee Name</label>
+                              <label class="label_field">Nume</label>
                               <input type="text" name="empname" value="" class="form-control" required='true'>
                            </div>
                           
 
                            <br>
                            <div class="field">
-                              <label class="label_field">Employee Email</label>
+                              <label class="label_field">Email</label>
                               <input type="email" name="empemail" id="empemail" value="" class="form-control" required='true' onBlur="checkemailidAvailability()">
                            </div>
                           <span id="empemail-status"></span>
 
                            <br>
                            <div class="field"> 
-                              <label class="label_field">Employee Contact Number</label>
+                              <label class="label_field">Telefon</label>
                               <input type="text" name="empcontno" id="empcontno" value="" class="form-control" required='true' maxlength="10" pattern="[0-9]+" onBlur="checkmobileAvailability()">
                            </div>
                             <span id="empcontno-status"></span>
                           <br>
                            <div class="field">
-                              <label class="label_field">Employee Designation</label>
+                              <label class="label_field">Fuctie</label>
                               <input type="text" name="designation" value="" class="form-control" required='true'>
                            </div>
 
                            <br>
                            <div class="field">
-                              <label class="label_field">Employee Date of Birth</label>
+                              <label class="label_field">Data de nastere</label>
                               <input type="date" name="empdob" value="" class="form-control" required='true'>
                            </div>
                           
 
                            <br>
                            <div class="field">
-                              <label class="label_field">Empoyee Address</label>
+                              <label class="label_field">Adresa</label>
                               <textarea type="text" name="empadd" value="" class="form-control" required='true'></textarea>
                            </div>
                           
 
                            <br>
                            <div class="field">
-                              <label class="label_field">Empoyee Date of Joining</label>
+                              <label class="label_field">Data inregistrare</label>
                               <input type="date" name="empdoj" value="" class="form-control" required='true'>
                            </div>
                           
 
                            <br>
                            <div class="field">
-                              <label class="label_field">Description(if any)</label>
+                              <label class="label_field">Descriere</label>
                               <textarea type="text" name="desc" value="" class="form-control"></textarea>
                            </div>
                           
 
                            <br>
                            <div class="field">
-                              <label class="label_field">Password</label>
+                              <label class="label_field">Parola</label>
                               <input type="text" name="password" value="" class="form-control" required='true'>
                            </div>
                            <br>
                            <div class="field">
-                              <label class="label_field">Employee Pic</label>
+                              <label class="label_field">Poza</label>
                               <input type="file" name="pic" value="" class="form-control" required='true'>
                            </div>
 

@@ -16,7 +16,7 @@ $allowed_extensions = array(".jpg","jpeg",".png",".gif");
 
 if(!in_array($extension,$allowed_extensions))
 {
-echo "<script>alert('Pic has Invalid format. Only jpg / jpeg/ png /gif format allowed');</script>";
+echo "<script>alert('Poza are un format invalid. Este permis doar formatul jpg/jpeg/png/gif');</script>";
 }
 else
 {
@@ -29,7 +29,7 @@ $query=$dbh->prepare($sql);
 $query->bindParam(':pic',$pic,PDO::PARAM_STR);
 $query->bindParam(':eid',$eid,PDO::PARAM_STR);
  $query->execute();
-  echo '<script>alert("Employee profile pic has been updated")</script>';
+  echo '<script>alert("Poza de profil a fost actualizata")</script>';
 }
 }
 
@@ -73,7 +73,7 @@ $query->bindParam(':eid',$eid,PDO::PARAM_STR);
                      <div class="row column_title">
                         <div class="col-md-12">
                            <div class="page_title">
-                              <h2>Update Employee Profile Pic</h2>
+                              <h2>Update Poza Profil</h2>
                            </div>
                         </div>
                      </div>
@@ -84,7 +84,7 @@ $query->bindParam(':eid',$eid,PDO::PARAM_STR);
                            <div class="white_shd full margin_bottom_30">
                               <div class="full graph_head">
                                  <div class="heading1 margin_0">
-                                    <h2>Update Employee Profile Pic</h2>
+                                    <h2>Update Poza Profil</h2>
                                  </div>
                               </div>
                               <div class="full progress_bar_inner">
@@ -95,31 +95,31 @@ $query->bindParam(':eid',$eid,PDO::PARAM_STR);
                                              <div class="alert alert-primary" role="alert">
                                                 <form method="post" enctype="multipart/form-data">
                                                    <?php
-$eid=$_GET['editid'];
-$sql="SELECT tbldepartment.ID as did, tbldepartment.DepartmentName,tblemployee.ID as eid,tblemployee.DepartmentID,tblemployee.EmpName,tblemployee.EmpId,tblemployee.EmpEmail,tblemployee.EmpContactNumber,tblemployee.EmpDateofjoining,tblemployee.Designation,tblemployee.EmpDateofbirth,tblemployee.EmpAddress,tblemployee.Description,tblemployee.ProfilePic,tblemployee.CreationDate from tblemployee join tbldepartment on tbldepartment.ID=tblemployee.DepartmentID where tblemployee.ID=:eid";
-$query = $dbh -> prepare($sql);
-$query->bindParam(':eid',$eid,PDO::PARAM_STR);
-$query->execute();
-$results=$query->fetchAll(PDO::FETCH_OBJ);
-$cnt=1;
-if($query->rowCount() > 0)
-{
-foreach($results as $row)
-{               ?>
+                                                   $eid=$_GET['editid'];
+                                                   $sql="SELECT tbldepartment.ID as did, tbldepartment.DepartmentName,tblemployee.ID as eid,tblemployee.DepartmentID,tblemployee.EmpName,tblemployee.EmpId,tblemployee.EmpEmail,tblemployee.EmpContactNumber,tblemployee.EmpDateofjoining,tblemployee.Designation,tblemployee.EmpDateofbirth,tblemployee.EmpAddress,tblemployee.Description,tblemployee.ProfilePic,tblemployee.CreationDate from tblemployee join tbldepartment on tbldepartment.ID=tblemployee.DepartmentID where tblemployee.ID=:eid";
+                                                   $query = $dbh -> prepare($sql);
+                                                   $query->bindParam(':eid',$eid,PDO::PARAM_STR);
+                                                   $query->execute();
+                                                   $results=$query->fetchAll(PDO::FETCH_OBJ);
+                                                   $cnt=1;
+                                                   if($query->rowCount() > 0)
+                                                   {
+                                                   foreach($results as $row)
+                                                   {               ?>
                         <fieldset>
                            <div class="field">
-                              <label class="label_field">Employee Name</label>
+                              <label class="label_field">Nume</label>
                               <input type="text" name="empname" value="<?php echo htmlentities($row->EmpName);?>" class="form-control" readonly="true">
                            </div>
                          <br>
                            <div class="field">
-                              <label class="label_field">Old Employee Pic</label>
+                              <label class="label_field">Poza veche</label>
                               <img src="images/<?php echo $row->ProfilePic;?>" width="100" height="100" value="<?php  echo $row->ProfilePic;?>">
                            </div>
 
                            <br>
                            <div class="field">
-                              <label class="label_field">New Employee Pic</label>
+                              <label class="label_field">Poza noua</label>
                               <input type="file" name="pic" value="" class="form-control" required='true'>
                            </div>
 

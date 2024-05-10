@@ -27,7 +27,7 @@ $query->bindParam(':remark',$remark,PDO::PARAM_STR);
 $query->bindParam(':workcom',$workcom,PDO::PARAM_STR);
 $query->bindParam(':vid',$vid,PDO::PARAM_STR);
  $query->execute();
- echo '<script>alert("Remark has been updated")</script>';
+ echo '<script>alert("Nota a fost actualizata cu succes")</script>';
  echo "<script>window.location.href ='all-task.php'</script>";
 }
 
@@ -36,7 +36,7 @@ $query->bindParam(':vid',$vid,PDO::PARAM_STR);
 <html lang="en">
    <head>
       
-      <title>Employee Task Management System || View New Task</title>
+      <title>WORK TASK NEXTLAB.TECH</title>
    
       <link rel="stylesheet" href="css/bootstrap.min.css" />
       <!-- site css -->
@@ -73,7 +73,7 @@ $query->bindParam(':vid',$vid,PDO::PARAM_STR);
                      <div class="row column_title">
                         <div class="col-md-12">
                            <div class="page_title">
-                              <h2> Task Details</h2>
+                              <h2> Detalii Task </h2>
                            </div>
                         </div>
                      </div>
@@ -85,7 +85,7 @@ $query->bindParam(':vid',$vid,PDO::PARAM_STR);
                            <div class="white_shd full margin_bottom_30">
                               <div class="full graph_head">
                                  <div class="heading1 margin_0">
-                                    <h2>View  Task Details</h2>
+                                    <h2>Vezi Detaliile Task-ului</h2>
                                  </div>
                               </div>
                               <div class="table_section padding_infor_info">
@@ -105,31 +105,31 @@ foreach($results as $row)
 {               ?> 
                                    <table class="table table-bordered" style="color:#000">
                                     <tr>
-    <th colspan="6" style="color: orange;font-weight: bold;font-size: 20px;text-align: center;">Task Details </th>
+    <th colspan="6" style="color: orange;font-weight: bold;font-size: 20px;text-align: center;"> Detalii Task </th>
   </tr>
   <tr>
-    <th>Task Title</th>
+    <th>Titlu</th>
     <td><?php  echo $row->TaskTitle;?></td>
-     <th>Task Priority</th>
+     <th>Prioritate</th>
     <td><?php  echo $row->TaskPriority;?></td>
   </tr>
   <tr>
-    <th>Task Description</th>
+    <th>Descriere</th>
     <td colspan="3"><?php  echo $row->TaskDescription;?></td>
  </tr>
  <tr>
-     <th>Task Assign Date</th>
+     <th>Data Atribuirie</th>
     <td colspan="3"><?php  echo $row->TaskAssigndate;?></td>
   </tr>
 
  <tr>
-     <th>Task Finish Date</th>
+     <th>Data Finalizare</th>
     <td colspan="3"><?php  echo $row->TaskEnddate;?></td>
   </tr>
 
   <tr>
      
-         <th>Employee Final Remark</th>
+         <th>Nota</th>
     <?php if($row->Status==""){ ?>
 
                      <td  colspan="4"><?php echo "Not Updated Yet"; ?></td>
@@ -140,23 +140,23 @@ foreach($results as $row)
 
   <tr>
    
-    <th>Task Final Status</th>
+    <th>Status Final Task</th>
    <td colspan="3"> <?php  $status=$row->Status;
     
 if($row->Status=="Inprogress")
 {
-  echo "In Progress";
+  echo "In Lucru";
 }
 
 if($row->Status=="Completed")
 {
- echo "Completed";
+ echo "Finalizat";
 }
 
 
 if($row->Status=="")
 {
-  echo "Not Response Yet";
+  echo "Nevazut";
 }
 
 
@@ -181,14 +181,14 @@ $cnt=1;
  ?>
 <table id="datatable" class="table table-bordered dt-responsive nowrap" style="color: #000;border-collapse: collapse; border-spacing: 0; width: 100%;">
   <tr align="center">
-   <th colspan="5" style="color:green" >Task  History</th> 
+   <th colspan="5" style="color:green" >Istoric Task</th> 
   </tr>
   <tr>
     <th>#</th>
-<th>Remark</th>
+<th>Nota</th>
 <th>Status</th>
-<th>Task Progress</th>
-<th>Time</th>
+<th>Progres</th>
+<th>Timp</th>
 </tr>
 <?php  
 foreach($results as $row)
@@ -199,7 +199,7 @@ foreach($results as $row)
   <td><?php  echo $row->Status;
 ?></td> 
 <td>
-<span class="skill" style="width:90%;">Task Progress<span class="info_valume"><?php  echo $row->WorkCompleted;?>%</span> </span>
+<span class="skill" style="width:90%;">Progres Task<span class="info_valume"><?php  echo $row->WorkCompleted;?>%</span> </span>
 
    <div class="progress skill-bar ">
                                        <div class="progress-bar progress-bar-animated progress-bar-striped" role="progressbar" aria-valuenow="<?php  echo $row->WorkCompleted;?>" aria-valuemin="0" aria-valuemax="100" style="width:<?php  echo $row->WorkCompleted;?>%;"></div>
@@ -217,14 +217,14 @@ foreach($results as $row)
 if ($status=="" || $status=="Inprogress"){
 ?> 
 <p align="center"  style="padding-top: 20px">                            
- <button class="btn btn-primary waves-effect waves-light w-lg" data-toggle="modal" data-target="#myModal">Take Action</button></p>  
+ <button class="btn btn-primary waves-effect waves-light w-lg" data-toggle="modal" data-target="#myModal">Completeaza</button></p>  
 
 <?php } ?>
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
      <div class="modal-content" style="width:150%">
       <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLabel">Take Action</h5>
+                                                    <h5 class="modal-title" id="exampleModalLabel">Completeaza</h5>
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
@@ -233,12 +233,12 @@ if ($status=="" || $status=="Inprogress"){
                                                 <table class="table table-bordered table-hover data-tables">
                                 <form method="post" name="submit">
      <tr>
-    <th width="300">Remark :</th>
+    <th width="300">Nota :</th>
     <td>
     <textarea name="remark" placeholder="Remark" rows="12" cols="14" class="form-control wd-650" required="true"></textarea></td>
   </tr> 
    <tr>
-    <th>Work Completion(in percentage) :</th>
+    <th>Progres(in procentaje) :</th>
     <td>
     <input name="workcom" placeholder="Work Completion in percentage (Eg: 20)" pattern="[0-9]+" title="only numbers" rows="12" cols="14" class="form-control wd-450" required="true"></td>
   </tr> 
@@ -246,15 +246,15 @@ if ($status=="" || $status=="Inprogress"){
     <th>Status :</th>
     <td>
    <select name="status" class="form-control wd-450" required="true" >
-     <option value="Inprogress" selected="true">Inprogress</option>
-     <option value="Completed">Completed</option>
+     <option value="Inprogress" selected="true">In Lucru</option>
+     <option value="Completed">Finalizat</option>
    </select></td>
   </tr>
 </table>
 </div>
 <div class="modal-footer">
- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
- <button type="submit" name="submit" class="btn btn-primary">Update</button>
+ <button type="button" class="btn btn-secondary" data-dismiss="modal">Inchide</button>
+ <button type="submit" name="submit" class="btn btn-primary">Actualizeaza</button>
   </form>
 </div>
 </div>

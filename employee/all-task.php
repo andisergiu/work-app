@@ -13,7 +13,7 @@ if (strlen($_SESSION['etmsempid']==0)) {
 <html lang="en">
    <head>
       
-      <title>Employee Task Management System || View All Task</title>
+      <title>WORK TASK NEXTLAB.TECH</title>
    
       <link rel="stylesheet" href="css/bootstrap.min.css" />
       <!-- site css --><!-- -->
@@ -50,7 +50,7 @@ if (strlen($_SESSION['etmsempid']==0)) {
                      <div class="row column_title">
                         <div class="col-md-12">
                            <div class="page_title">
-                              <h2>View All Task</h2>
+                              <h2>Vezi Toate Task-urile</h2>
                            </div>
                         </div>
                      </div>
@@ -70,31 +70,31 @@ if (strlen($_SESSION['etmsempid']==0)) {
                                     <table class="table table-bordered">
                                        <thead>
                                           <tr>
-                                             <th>S.No</th>
-                                             <th>Task Title</th>
-                                             <th>Department</th>
-                                             <th>Assign To</th>
-                                             <th>Assign Date</th>
-                                             <th>End Date</th>
+                                             <th>NR</th>
+                                             <th>Titlu</th>
+                                             <th>Departament</th>
+                                             <th>Atribuit</th>
+                                             <th>Data atribuire</th>
+                                             <th>Data finalizare</th>
                                              <th>Status</th>
-                                             <th>Action</th>
+                                             <th>Actiuni</th>
                                           </tr>
                                        </thead>
                                        <tbody>
 
                                           <?php
                                            $empid=$_SESSION['etmsempid'];
-$sql="SELECT tbltask.ID as tid,tbltask.TaskTitle,tbltask.Status,tbltask.DeptID,tbltask.AssignTaskto,tbltask.TaskEnddate,tbltask.TaskAssigndate,tbldepartment.DepartmentName,tbldepartment.ID as did,tblemployee.EmpName,tblemployee.EmpId from tbltask join tbldepartment on tbldepartment.ID=tbltask.DeptID join tblemployee on tblemployee.ID=tbltask.AssignTaskto where tbltask.AssignTaskto=:empid";
-$query = $dbh -> prepare($sql);
-$query-> bindParam(':empid', $empid, PDO::PARAM_STR);
-$query->execute();
-$results=$query->fetchAll(PDO::FETCH_OBJ);
+                                          $sql="SELECT tbltask.ID as tid,tbltask.TaskTitle,tbltask.Status,tbltask.DeptID,tbltask.AssignTaskto,tbltask.TaskEnddate,tbltask.TaskAssigndate,tbldepartment.DepartmentName,tbldepartment.ID as did,tblemployee.EmpName,tblemployee.EmpId from tbltask join tbldepartment on tbldepartment.ID=tbltask.DeptID join tblemployee on tblemployee.ID=tbltask.AssignTaskto where tbltask.AssignTaskto=:empid";
+                                          $query = $dbh -> prepare($sql);
+                                          $query-> bindParam(':empid', $empid, PDO::PARAM_STR);
+                                          $query->execute();
+                                          $results=$query->fetchAll(PDO::FETCH_OBJ);
 
-$cnt=1;
-if($query->rowCount() > 0)
-{
-foreach($results as $row)
-{               ?> 
+                                          $cnt=1;
+                                          if($query->rowCount() > 0)
+                                          {
+                                          foreach($results as $row)
+                                          {               ?> 
                                           <tr>
                                               
                                              <td><?php echo htmlentities($cnt);?></td>
@@ -103,7 +103,7 @@ foreach($results as $row)
                                              <td><?php  echo htmlentities($row->EmpName);?>(<?php  echo htmlentities($row->EmpId);?>)</td>
                                              <td><?php  echo htmlentities($row->TaskAssigndate);?></td>
                                              <td><?php  echo htmlentities($row->TaskEnddate);?></td>
-<?php if($row->Status==""){ ?>
+                     <?php if($row->Status==""){ ?>
 
                      <td class="font-w600"><?php echo "Not Updated Yet"; ?></td>
                      <?php } else { ?>

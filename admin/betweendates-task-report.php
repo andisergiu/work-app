@@ -17,12 +17,12 @@ $query->bindParam(':deptname',$deptname,PDO::PARAM_STR);
 
    $LastInsertId=$dbh->lastInsertId();
    if ($LastInsertId>0) {
-    echo '<script>alert("Department has been added.")</script>';
+    echo '<script>alert("Departamentul a fost adaugat")</script>';
 echo "<script>window.location.href ='add-dept.php'</script>";
   }
   else
     {
-         echo '<script>alert("Something Went Wrong. Please try again")</script>';
+         echo '<script>alert("Eroare, te rog sa incerci iar")</script>';
     }
 
   
@@ -68,7 +68,7 @@ echo "<script>window.location.href ='add-dept.php'</script>";
                      <div class="row column_title">
                         <div class="col-md-12">
                            <div class="page_title">
-                              <h2>Between Dates Task Reports</h2>
+                              <h2>Raport</h2>
                            </div>
                         </div>
                      </div>
@@ -79,7 +79,7 @@ echo "<script>window.location.href ='add-dept.php'</script>";
                            <div class="white_shd full margin_bottom_30">
                               <div class="full graph_head">
                                  <div class="heading1 margin_0">
-                                    <h2>Between Dates Task Reports</h2>
+                                    <h2>Raport</h2>
                                  </div>
                               </div>
                               <div class="full progress_bar_inner">
@@ -92,14 +92,14 @@ echo "<script>window.location.href ='add-dept.php'</script>";
                         <fieldset>
                             
                            <div class="field">
-                              <label class="label_field">From Date:</label>
+                              <label class="label_field">De la data:</label>
                               <input type="date" class="form-control" id="fromdate" name="fromdate" value="" required='true'>
                            </div>
                           
 
                            <br>
                            <div class="field">
-                              <label class="label_field">To Date:</label>
+                              <label class="label_field">Pana la data:</label>
                               <input type="date" class="form-control" id="todate" name="todate" value="" required='true'>
                            </div>
                           
@@ -107,7 +107,7 @@ echo "<script>window.location.href ='add-dept.php'</script>";
                            <br>
                            <div class="field margin_0">
                               <label class="label_field hidden">hidden label</label>
-                              <button class="main_bt" type="submit" name="submit" id="submit">Add</button>
+                              <button class="main_bt" type="submit" name="submit" id="submit">Trimite</button>
                            </div>
                         </fieldset>
                      </form></div>

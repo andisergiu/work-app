@@ -63,13 +63,13 @@ if (strlen($_SESSION['etmsaid']==0)) {
                                  <div>
                                     <?php 
                         $sql1 ="SELECT * from  tbldepartment";
-$query1 = $dbh -> prepare($sql1);
-$query1->execute();
-$results1=$query1->fetchAll(PDO::FETCH_OBJ);
-$totdept=$query1->rowCount();
-?><a href="manage-dept.php" >
+                              $query1 = $dbh -> prepare($sql1);
+                              $query1->execute();
+                              $results1=$query1->fetchAll(PDO::FETCH_OBJ);
+                              $totdept=$query1->rowCount();
+                              ?><a href="manage-dept.php" >
                                     <p class="total_no"><?php echo htmlentities($totdept);?></p>
-                                    <p class="head_couter" style="color:#fff !important">Total Department</p>
+                                    <p class="head_couter" style="color:#fff !important">Departmente</p>
                                  </a>
                                  </div>
                               </div>
@@ -86,13 +86,13 @@ $totdept=$query1->rowCount();
                                  <div>
                                     <?php 
                         $sql2 ="SELECT * from  tblemployee";
-$query2 = $dbh -> prepare($sql2);
-$query2->execute();
-$results2=$query2->fetchAll(PDO::FETCH_OBJ);
-$totemp=$query2->rowCount();
-?><a href="manage-employee.php">
+                              $query2 = $dbh -> prepare($sql2);
+                              $query2->execute();
+                              $results2=$query2->fetchAll(PDO::FETCH_OBJ);
+                              $totemp=$query2->rowCount();
+                              ?><a href="manage-employee.php">
                                    <p class="total_no"><?php echo htmlentities($totemp);?></p>
-                                    <p class="head_couter" style="color:#fff">Total Employees</p>
+                                    <p class="head_couter" style="color:#fff">Angajati</p>
                                  </a>
                                  </div>
                               </div>
@@ -110,14 +110,14 @@ $totemp=$query2->rowCount();
                                      <?php 
                                   
                         $sql3 ="SELECT * from  tbltask where Status='Inprogress'";
-$query3 = $dbh -> prepare($sql3);
-$query3-> bindParam(':eid', $eid, PDO::PARAM_STR);
-$query3->execute();
-$results3=$query3->fetchAll(PDO::FETCH_OBJ);
-$inprotask=$query3->rowCount();
-?><a href="inprogress-task.php">
+                              $query3 = $dbh -> prepare($sql3);
+                              $query3-> bindParam(':eid', $eid, PDO::PARAM_STR);
+                              $query3->execute();
+                              $results3=$query3->fetchAll(PDO::FETCH_OBJ);
+                              $inprotask=$query3->rowCount();
+                              ?><a href="inprogress-task.php">
                                    <p class="total_no"><?php echo htmlentities($inprotask);?></p>
-                                    <p class="head_couter" style="color:#fff">Inprogress Task</p>
+                                    <p class="head_couter" style="color:#fff">Task-uri in lucru</p>
                                     </a>
                                  </div>
                               </div>
@@ -134,14 +134,14 @@ $inprotask=$query3->rowCount();
                                  <div>
                                     <?php 
                         $sql4 ="SELECT * from  tbltask where Status='Completed'";
-$query4 = $dbh -> prepare($sql4);
-$query4-> bindParam(':eid', $eid, PDO::PARAM_STR);
-$query4->execute();
-$results4=$query4->fetchAll(PDO::FETCH_OBJ);
-$comptask=$query4->rowCount();
-?><a href="completed-task.php">
+                              $query4 = $dbh -> prepare($sql4);
+                              $query4-> bindParam(':eid', $eid, PDO::PARAM_STR);
+                              $query4->execute();
+                              $results4=$query4->fetchAll(PDO::FETCH_OBJ);
+                              $comptask=$query4->rowCount();
+                              ?><a href="completed-task.php">
                                    <p class="total_no"><?php echo htmlentities($comptask);?></p>
-                                    <p class="head_couter" style="color:#fff">Completed Task</p>
+                                    <p class="head_couter" style="color:#fff">Task-uri terminate</p>
                                  </a>
                                  </div>
                               </div>
@@ -160,13 +160,13 @@ $comptask=$query4->rowCount();
                                  <div>
                                           <?php 
                         $sql5 ="SELECT * from  tbltask";
-$query5 = $dbh -> prepare($sql5);
-$query5->execute();
-$results5=$query5->fetchAll(PDO::FETCH_OBJ);
-$alltasks=$query5->rowCount();
-?><a href="manage-task.php">
+                        $query5 = $dbh -> prepare($sql5);
+                        $query5->execute();
+                        $results5=$query5->fetchAll(PDO::FETCH_OBJ);
+                        $alltasks=$query5->rowCount();
+                        ?><a href="manage-task.php">
                                     <p class="total_no"><?php echo htmlentities($alltasks);?></p>
-                                    <p class="head_couter" style="color:#000">All Tasks </p>
+                                    <p class="head_couter" style="color:#000">Toate Task-urile </p>
                                  </a>
                                  </div>
                               </div>

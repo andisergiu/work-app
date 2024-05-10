@@ -27,12 +27,12 @@ $query->bindParam(':tedate',$tedate,PDO::PARAM_STR);
 
    $LastInsertId=$dbh->lastInsertId();
    if ($LastInsertId>0) {
-    echo '<script>alert("Task has been added.")</script>';
+    echo '<script>alert("Task-ul a fost adaugat")</script>';
 echo "<script>window.location.href ='add-task.php'</script>";
   }
   else
     {
-         echo '<script>alert("Something Went Wrong. Please try again")</script>';
+         echo '<script>alert("Eroare, te rog mai incearca")</script>';
     }
 
   
@@ -91,7 +91,7 @@ $("#emplist").html(data);
                      <div class="row column_title">
                         <div class="col-md-12">
                            <div class="page_title">
-                              <h2>Add Task</h2>
+                              <h2>Adauga Task</h2>
                            </div>
                         </div>
                      </div>
@@ -102,7 +102,7 @@ $("#emplist").html(data);
                            <div class="white_shd full margin_bottom_30">
                               <div class="full graph_head">
                                  <div class="heading1 margin_0">
-                                    <h2>Add Task</h2>
+                                    <h2>Adauga Task</h2>
                                  </div>
                               </div>
                               <div class="full progress_bar_inner">
@@ -114,9 +114,9 @@ $("#emplist").html(data);
                                                 <form method="post">
                         <fieldset>
                             <div class="field">
-                              <label class="label_field">Department Name</label>
+                              <label class="label_field">Departament</label>
                               <select type="text" name="deptid" id="deptid" onChange="getemp(this.value);" value="" class="form-control" required='true'>
-                                 <option value="">Select Department</option>
+                                 <option value="">Selectare Departament</option>
                                   <?php 
 
                                     $sql2 = "SELECT * from   tbldepartment ";
@@ -126,17 +126,17 @@ $("#emplist").html(data);
 
                                     foreach($result2 as $row2)
                                     {          
-    ?>  
-   
-<option value="<?php echo htmlentities($row2->ID);?>"><?php echo htmlentities($row2->DepartmentName
-    );?></option>
- <?php } ?>
+                                       ?>  
+                                       
+                                    <option value="<?php echo htmlentities($row2->ID);?>"><?php echo htmlentities($row2->DepartmentName
+                                       );?></option>
+                                    <?php } ?>
                               </select>
                            </div>
                            <br>
                            <div class="field">
                               <div class="field">
-                              <label class="label_field">Employee List</label>
+                              <label class="label_field">Lista Angajati</label>
                               <select type="text" name="emplist" id="emplist" value="" class="form-control" required='true'>
 
                               </select>
@@ -145,9 +145,9 @@ $("#emplist").html(data);
                            <br>
                           <div class="field">
                               <div class="field">
-                              <label class="label_field">Task Priority</label>
+                              <label class="label_field">Propritate</label>
                               <select type="text" name="tpriority" value="" class="form-control" required='true'>
-                                 <option value="">Select Task Priority</option>
+                                 <option value="">Selecteaza prioritatea</option>
                                  <option value="Normal">Normal</option>
                                  <option value="Medium">Medium</option>
                                  <option value="Urgent">Urgent</option>
@@ -156,25 +156,25 @@ $("#emplist").html(data);
                               </select>
                            </div>
                            </div>
-<br>
+                              <br>
                            <div class="field">
-                              <label class="label_field">Task Title</label>
+                              <label class="label_field">Titlu</label>
                               <input type="text" name="ttitle" value="" class="form-control" required='true'>
                            </div>
                            <br>
                            <div class="field">
-                              <label class="label_field">Task Description</label>
+                              <label class="label_field">Descriere</label>
                               <textarea type="text" name="tdesc" value="" class="form-control" required='true'></textarea>
                            </div>
                            <br>
                             <div class="field">
-                              <label class="label_field">Task End Date</label>
+                              <label class="label_field">Data de finalizare</label>
                               <input type="date" name="tedate" value="" class="form-control" required='true'>
                            </div>
                            <br>
                            <div class="field margin_0">
                               <label class="label_field hidden">hidden label</label>
-                              <button class="main_bt" type="submit" name="submit" id="submit">Add</button>
+                              <button class="main_bt" type="submit" name="submit" id="submit">Adauga</button>
                            </div>
                         </fieldset>
                      </form></div>

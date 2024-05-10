@@ -104,7 +104,7 @@ foreach($results as $row)
                         
                         <fieldset>
                             <div class="field">
-                              <label class="label_field">Department Name</label>
+                              <label class="label_field">Departament</label>
                               <select type="text" name="deptid" value="" class="form-control" required='true'>
                                  <option value="<?php echo htmlentities($row->DeptID);?>"><?php echo htmlentities($row->DepartmentName);?></option>
                                   <?php 
@@ -126,7 +126,7 @@ foreach($result2 as $row2)
                            <br>
                            <div class="field">
                               <div class="field">
-                              <label class="label_field">Employee List</label>
+                              <label class="label_field">Lista Angajati</label>
                               <select type="text" name="emplist" value="" class="form-control" required='true'>
                                  <option value="<?php echo htmlentities($row->AssignTaskto);?>"><?php echo htmlentities($row->EmpName);?>(<?php echo htmlentities($row->EmpId);?>)</option>
                                   <?php 
@@ -150,7 +150,7 @@ foreach($result2 as $row3)
                            <br>
                           <div class="field">
                               <div class="field">
-                              <label class="label_field">Task Priority</label>
+                              <label class="label_field">Prioritate task</label>
                               <select type="text" name="tpriority" class="form-control" required='true'>
                                  <option value="<?php echo htmlentities($row->TaskPriority);?>"><?php echo htmlentities($row->TaskPriority);?></option>
                                  <option value="Normal">Normal</option>
@@ -163,23 +163,23 @@ foreach($result2 as $row3)
                            </div>
 <br>
                            <div class="field">
-                              <label class="label_field">Task Title</label>
+                              <label class="label_field">Titlu</label>
                               <input type="text" name="ttitle" value="<?php echo htmlentities($row->TaskTitle);?>" class="form-control" required='true'>
                            </div>
                            <br>
                            <div class="field">
-                              <label class="label_field">Task Description</label>
+                              <label class="label_field">Descriere</label>
                               <textarea type="text" name="tdesc" value="" class="form-control" required='true'><?php echo htmlentities($row->TaskDescription);?></textarea>
                            </div>
                            <br>
                             <div class="field">
-                              <label class="label_field">Task End Date</label>
+                              <label class="label_field">Data final</label>
                               <input type="date" name="tedate" value="<?php echo htmlentities($row->TaskEnddate);?>" class="form-control" required='true'>
                            </div> <?php $cnt=$cnt+1;}} ?>
                            <br>
                            <div class="field margin_0">
                               <label class="label_field hidden">hidden label</label>
-                              <button class="main_bt" type="submit" name="submit" id="submit">Add</button>
+                              <button class="main_bt" type="submit" name="submit" id="submit">Adauga</button>
                            </div>
                         </fieldset>
                      </form></div>

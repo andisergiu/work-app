@@ -50,7 +50,7 @@ if (strlen($_SESSION['etmsaid']==0)) {
                      <div class="row column_title">
                         <div class="col-md-12">
                            <div class="page_title">
-                              <h2>View Inprogress Task</h2>
+                              <h2>Vezi Inprogress Task</h2>
                            </div>
                         </div>
                      </div>
@@ -62,7 +62,7 @@ if (strlen($_SESSION['etmsaid']==0)) {
                            <div class="white_shd full margin_bottom_30">
                               <div class="full graph_head">
                                  <div class="heading1 margin_0">
-                                    <h2>View Inprogress Task</h2>
+                                    <h2>Vezi Inprogress Task</h2>
                                  </div>
                               </div>
                               <div class="table_section padding_infor_info">
@@ -70,14 +70,14 @@ if (strlen($_SESSION['etmsaid']==0)) {
                                     <table class="table table-bordered">
                                        <thead>
                                           <tr>
-                                             <th>S.No</th>
-                                             <th>Task Title</th>
-                                             <th>Department</th>
-                                             <th>Assign To</th>
-                                             <th>Assign Date</th>
-                                             <th>End Date</th>
+                                             <th>NR</th>
+                                             <th>Titlu</th>
+                                             <th>Departament</th>
+                                             <th>Atribuit</th>
+                                             <th>Data atribuire</th>
+                                             <th>Data finalizare</th>
                                              <th>Status</th>
-                                             <th>Action</th>
+                                             <th>Actiuni</th>
                                           </tr>
                                        </thead>
                                        <tbody>

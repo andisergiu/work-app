@@ -76,7 +76,7 @@ $query->bindParam(':eid',$eid,PDO::PARAM_STR);
                      <div class="row column_title">
                         <div class="col-md-12">
                            <div class="page_title">
-                              <h2>Update Employee</h2>
+                              <h2>Update Angajat</h2>
                            </div>
                         </div>
                      </div>
@@ -87,7 +87,7 @@ $query->bindParam(':eid',$eid,PDO::PARAM_STR);
                            <div class="white_shd full margin_bottom_30">
                               <div class="full graph_head">
                                  <div class="heading1 margin_0">
-                                    <h2>Update Employee</h2>
+                                    <h2>Update Angajat</h2>
                                  </div>
                               </div>
                               <div class="full progress_bar_inner">
@@ -112,7 +112,7 @@ foreach($results as $row)
                         <fieldset>
                             
                            <div class="field">
-                              <label class="label_field">Department Name</label>
+                              <label class="label_field">Departament</label>
                               <select type="text" name="deptname" value="" class="form-control" required='true'>
                                  <option value="<?php echo htmlentities($row->DepartmentID);?>"><?php echo htmlentities($row->DepartmentName);?></option>
                                   <?php 
@@ -136,60 +136,60 @@ foreach($result2 as $row2)
                            <br>
 
                            <div class="field">
-                              <label class="label_field">Employee ID</label>
+                              <label class="label_field">ID</label>
                               <input type="text" name="empid" value="<?php echo ($row->EmpId);?>" class="form-control" required='true'>
                            </div>
                           
 
                            <br>
                            <div class="field">
-                              <label class="label_field">Employee Name</label>
+                              <label class="label_field">Angajat</label>
                               <input type="text" name="empname" value="<?php echo htmlentities($row->EmpName);?>" class="form-control" required='true'>
                            </div>
                           
 
                            <br>
                            <div class="field">
-                              <label class="label_field">Employee Email</label>
+                              <label class="label_field">Email</label>
                               <input type="email" name="empemail" value="<?php echo htmlentities($row->EmpEmail);?>" class="form-control" required='true'>
                            </div>
                           
 
                            <br>
                            <div class="field">
-                              <label class="label_field">Employee Contact Number</label>
+                              <label class="label_field">Telefon</label>
                               <input type="text" name="empcontno" value="<?php echo htmlentities($row->EmpContactNumber);?>" class="form-control" required='true' maxlength="10" pattern="[0-9]+">
                            </div>
                           <br>
                            <div class="field">
-                              <label class="label_field">Employee Designation</label>
+                              <label class="label_field">Functie</label>
                               <input type="text" name="designation" value="<?php echo htmlentities($row->Designation);?>" class="form-control" required='true'>
                            </div>
 
                            <br>
                            <div class="field">
-                              <label class="label_field">Employee Date of Birth</label>
+                              <label class="label_field">Data de nastere</label>
                               <input type="date" name="empdob" value="<?php echo htmlentities($row->EmpDateofbirth);?>" class="form-control" required='true'>
                            </div>
                           
 
                            <br>
                            <div class="field">
-                              <label class="label_field">Empoyee Address</label>
+                              <label class="label_field">Adresa</label>
                               <textarea type="text" name="empadd" class="form-control" required='true'><?php echo htmlentities($row->EmpAddress);?></textarea>
                            </div>
                           
 
                            <br>
                            <div class="field">
-                              <label class="label_field">Empoyee Date of Joining</label>
+                              <label class="label_field">Data de inregistrare/label>
                               <input type="date" name="empdoj" value="<?php echo htmlentities($row->EmpDateofjoining);?>" class="form-control" required='true'>
                            </div>
                           
 
                            <br>
                            <div class="field">
-                              <label class="label_field">Description(if any)</label>
+                              <label class="label_field">Descriere</label>
                               <textarea type="text" name="desc" value="" class="form-control"><?php echo htmlentities($row->Description);?></textarea>
                            </div>
                           
@@ -197,7 +197,7 @@ foreach($result2 as $row2)
                            <br>
                          
                            <div class="field">
-                              <label class="label_field">Employee Pic</label>
+                              <label class="label_field">Imagine</label>
                               <img src="images/<?php echo $row->ProfilePic;?>" width="100" height="100" value="<?php  echo $row->ProfilePic;?>"><a href="changeimage.php?editid=<?php echo $row->eid;?>"> &nbsp; Edit Image</a>
                            </div>
 

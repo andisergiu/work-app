@@ -82,10 +82,10 @@ $query->execute();
                                     <table class="table table-bordered">
                                        <thead>
                                           <tr>
-                                             <th>S.No</th>
-                                             <th>Department Name</th>
-                                             <th>Creation Date</th>
-                                             <th>Action</th>
+                                             <th>NR</th>
+                                             <th>Departament</th>
+                                             <th>Data adaugarii</th>
+                                             <th>Actiuni</th>
                                           </tr>
                                        </thead>
                                        <tbody>

@@ -27,14 +27,14 @@ $query->bindParam(':empdoj',$empdoj,PDO::PARAM_STR);
 $query->bindParam(':desc',$desc,PDO::PARAM_STR);
 $query->bindParam(':eid',$etmseid,PDO::PARAM_STR);
 $query-> execute();
-    echo '<script>alert("Your profile has been updated")</script>';
+    echo '<script>alert("Profilul a fost actualizat cu succes")</script>';
     echo "<script>window.location.href ='profile.php'</script>";
   }
   ?>
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <title>Employee Task Management System || Profile</title>
+      <title>WORK TASK NEXTLAB.TECH</title>
     
       <link rel="stylesheet" href="css/bootstrap.min.css" />
       <!-- site css -->
@@ -70,7 +70,7 @@ $query-> execute();
                      <div class="row column_title">
                         <div class="col-md-12">
                            <div class="page_title">
-                              <h2>Employee Profile</h2>
+                              <h2>Profil</h2>
                            </div>
                         </div>
                      </div>
@@ -81,7 +81,7 @@ $query-> execute();
                            <div class="white_shd full margin_bottom_30">
                               <div class="full graph_head">
                                  <div class="heading1 margin_0">
-                                    <h2>Profile</h2>
+                                    <h2>Profil</h2>
                                  </div>
                               </div>
                               <div class="full progress_bar_inner">
@@ -92,22 +92,22 @@ $query-> execute();
                                              <div class="alert alert-primary" role="alert">
                                                 <form method="post">
                         
-                            <?php
-$etmseid=$_SESSION['etmsempid'];
-$sql="SELECT tbldepartment.ID as did, tbldepartment.DepartmentName,tblemployee.ID as eid,tblemployee.DepartmentID,tblemployee.EmpName,tblemployee.EmpId,tblemployee.EmpEmail,tblemployee.EmpContactNumber,tblemployee.EmpDateofjoining,tblemployee.Designation,tblemployee.EmpDateofbirth,tblemployee.EmpAddress,tblemployee.Description,tblemployee.ProfilePic,tblemployee.CreationDate from tblemployee join tbldepartment on tbldepartment.ID=tblemployee.DepartmentID where tblemployee.ID=:eid";
-$query = $dbh -> prepare($sql);
-$query->bindParam(':eid',$etmseid,PDO::PARAM_STR);
-$query->execute();
-$results=$query->fetchAll(PDO::FETCH_OBJ);
-$cnt=1;
-if($query->rowCount() > 0)
-{
-foreach($results as $row)
-{               ?>
+                                                <?php
+                                                $etmseid=$_SESSION['etmsempid'];
+                                                $sql="SELECT tbldepartment.ID as did, tbldepartment.DepartmentName,tblemployee.ID as eid,tblemployee.DepartmentID,tblemployee.EmpName,tblemployee.EmpId,tblemployee.EmpEmail,tblemployee.EmpContactNumber,tblemployee.EmpDateofjoining,tblemployee.Designation,tblemployee.EmpDateofbirth,tblemployee.EmpAddress,tblemployee.Description,tblemployee.ProfilePic,tblemployee.CreationDate from tblemployee join tbldepartment on tbldepartment.ID=tblemployee.DepartmentID where tblemployee.ID=:eid";
+                                                $query = $dbh -> prepare($sql);
+                                                $query->bindParam(':eid',$etmseid,PDO::PARAM_STR);
+                                                $query->execute();
+                                                $results=$query->fetchAll(PDO::FETCH_OBJ);
+                                                $cnt=1;
+                                                if($query->rowCount() > 0)
+                                                {
+                                                foreach($results as $row)
+                                                {               ?>
                            <fieldset>
                             
                            <div class="field">
-                              <label class="label_field">Department Name</label>
+                              <label class="label_field">Departament</label>
                               <select type="text" name="deptname" value="" class="form-control" readonly='true'>
                                  <option value="<?php echo htmlentities($row->DepartmentID);?>"><?php echo htmlentities($row->DepartmentName);?></option>
                               </select>
@@ -117,60 +117,60 @@ foreach($results as $row)
                            <br>
 
                            <div class="field">
-                              <label class="label_field">Employee ID</label>
+                              <label class="label_field">ID</label>
                               <input type="text" name="empid" value="<?php echo ($row->EmpId);?>" class="form-control" readonly='true'>
                            </div>
                           
 
                            <br>
                            <div class="field">
-                              <label class="label_field">Employee Name</label>
+                              <label class="label_field">Angajat</label>
                               <input type="text" name="empname" value="<?php echo htmlentities($row->EmpName);?>" class="form-control" required='true'>
                            </div>
                           
 
                            <br>
                            <div class="field">
-                              <label class="label_field">Employee Email</label>
+                              <label class="label_field">Email</label>
                               <input type="email" name="empemail" value="<?php echo htmlentities($row->EmpEmail);?>" class="form-control" readonly='true'>
                            </div>
                           
 
                            <br>
                            <div class="field">
-                              <label class="label_field">Employee Contact Number</label>
+                              <label class="label_field">Telefon</label>
                               <input type="text" name="empcontno" value="<?php echo htmlentities($row->EmpContactNumber);?>" class="form-control" readonly='true' maxlength="10" pattern="[0-9]+">
                            </div>
                           <br>
                            <div class="field">
-                              <label class="label_field">Employee Designation</label>
+                              <label class="label_field">Functie</label>
                               <input type="text" name="designation" value="<?php echo htmlentities($row->Designation);?>" class="form-control" required='true'>
                            </div>
 
                            <br>
                            <div class="field">
-                              <label class="label_field">Employee Date of Birth</label>
+                              <label class="label_field">Data de nastere</label>
                               <input type="date" name="empdob" value="<?php echo htmlentities($row->EmpDateofbirth);?>" class="form-control" required='true'>
                            </div>
                           
 
                            <br>
                            <div class="field">
-                              <label class="label_field">Empoyee Address</label>
+                              <label class="label_field">Adresa</label>
                               <textarea type="text" name="empadd" class="form-control" required='true'><?php echo htmlentities($row->EmpAddress);?></textarea>
                            </div>
                           
 
                            <br>
                            <div class="field">
-                              <label class="label_field">Empoyee Date of Joining</label>
+                              <label class="label_field">Data de inregistrare</label>
                               <input type="date" name="empdoj" value="<?php echo htmlentities($row->EmpDateofjoining);?>" class="form-control" readonly='true'>
                            </div>
                           
 
                            <br>
                            <div class="field">
-                              <label class="label_field">Description(if any)</label>
+                              <label class="label_field">Descriere</label>
                               <textarea type="text" name="desc"  class="form-control" required='true'><?php echo htmlentities($row->Description);?></textarea>
                            </div>
                           
@@ -178,7 +178,7 @@ foreach($results as $row)
                            <br>
                          
                            <div class="field">
-                              <label class="label_field">Employee Pic</label>
+                              <label class="label_field">Poza</label>
                               <img src="../admin/images/<?php echo $row->ProfilePic;?>" width="100" height="100" value="<?php  echo $row->ProfilePic;?>"><a href="changeimage.php?editid=<?php echo $row->eid;?>"> &nbsp; Edit Image</a>
                            </div>
 

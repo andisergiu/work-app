@@ -62,7 +62,7 @@ $query->execute();
                      <div class="row column_title">
                         <div class="col-md-12">
                            <div class="page_title">
-                              <h2>Task Reports</h2>
+                              <h2>Raport Task-uri</h2>
                            </div>
                         </div>
                      </div>
@@ -74,40 +74,40 @@ $query->execute();
                            <div class="white_shd full margin_bottom_30">
                               <div class="full graph_head">
                                  <div class="heading1 margin_0">
-                                    <h2>Task Reports</h2>
+                                    <h2>Raport Task-uri</h2>
                                  </div>
                               </div>
                               <div class="table_section padding_infor_info">
                                  <div class="table-responsive-sm">
                                     <?php
-$fdate=$_POST['fromdate'];
-$tdate=$_POST['todate'];
-  ?>
-  <h5 align="center" style="color:blue">Report from <?php echo $fdate?> to <?php echo $tdate?></h5>
+                                       $fdate=$_POST['fromdate'];
+                                       $tdate=$_POST['todate'];
+                                       ?>
+                                    <h5 align="center" style="color:blue">Report din <?php echo $fdate?> pana la <?php echo $tdate?></h5>
                                     <table class="table table-bordered">
                                        <thead>
                                           <tr>
-                                             <th>S.No</th>
-                                             <th>Task Title</th>
-                                             <th>Department</th>
-                                             <th>Assign To</th>
-                                             <th>Assign Date</th>
-                                             <th>End Date</th>
-                                             <th>Action</th>
+                                             <th>NR</th>
+                                             <th>Titlu</th>
+                                             <th>Departament</th>
+                                             <th>Atribuit</th>
+                                             <th>Data atribuire</th>
+                                             <th>Data finalizare</th>
+                                             <th>Actiuni</th>
                                           </tr>
                                        </thead>
                                        <tbody>
                                           <?php
-$sql="SELECT tbltask.ID as tid,tbltask.TaskTitle,tbltask.DeptID,tbltask.AssignTaskto,tbltask.TaskEnddate,tbltask.TaskAssigndate,tbldepartment.DepartmentName,tbldepartment.ID as did,tblemployee.EmpName,tblemployee.EmpId from tbltask join tbldepartment on tbldepartment.ID=tbltask.DeptID join tblemployee on tblemployee.ID=tbltask.AssignTaskto where date(tbltask.TaskAssigndate) between '$fdate' and '$tdate'";
-$query = $dbh -> prepare($sql);
-$query->execute();
-$results=$query->fetchAll(PDO::FETCH_OBJ);
+                                             $sql="SELECT tbltask.ID as tid,tbltask.TaskTitle,tbltask.DeptID,tbltask.AssignTaskto,tbltask.TaskEnddate,tbltask.TaskAssigndate,tbldepartment.DepartmentName,tbldepartment.ID as did,tblemployee.EmpName,tblemployee.EmpId from tbltask join tbldepartment on tbldepartment.ID=tbltask.DeptID join tblemployee on tblemployee.ID=tbltask.AssignTaskto where date(tbltask.TaskAssigndate) between '$fdate' and '$tdate'";
+                                             $query = $dbh -> prepare($sql);
+                                             $query->execute();
+                                             $results=$query->fetchAll(PDO::FETCH_OBJ);
 
-$cnt=1;
-if($query->rowCount() > 0)
-{
-foreach($results as $row)
-{               ?> 
+                                             $cnt=1;
+                                             if($query->rowCount() > 0)
+                                             {
+                                             foreach($results as $row)
+                                             {               ?> 
                                           <tr>
                                               
                                              <td><?php echo htmlentities($cnt);?></td>
@@ -117,15 +117,15 @@ foreach($results as $row)
                                              <td><?php  echo htmlentities($row->TaskAssigndate);?></td>
                                              <td><?php  echo htmlentities($row->TaskEnddate);?></td>
                                              <td><a href="edit-task.php?editid=<?php echo htmlentities ($row->tid);?>" class="btn btn-primary">Edit</a>
-                                                 <a href="manage-task.php?delid=<?php echo ($row->tid);?>" onclick="return confirm('Do you really want to Delete ?');" class="btn btn-danger">Delete</a></td>
+                                                 <a href="manage-task.php?delid=<?php echo ($row->tid);?>" onclick="return confirm('Esti sigur ca doresti sa stergi definitiv ?');" class="btn btn-danger">Delete</a></td>
                                           </tr> <?php 
-$cnt=$cnt+1;
-} } else { ?>
-  <tr>
-    <td colspan="8"> No record found against between this date</td>
+                                                   $cnt=$cnt+1;
+                                                   } } else { ?>
+                                                   <tr>
+                                                      <td colspan="8"> Nu sunt task-uri inregistrate in acest interval de timp</td>
 
-  </tr>
-  <?php } ?>
+                                                   </tr>
+                                                   <?php } ?>
                                        </tbody>
                                     </table>
                                  </div>

@@ -82,13 +82,13 @@ $query->execute();
                                     <table class="table table-bordered">
                                        <thead>
                                           <tr>
-                                             <th>S.No</th>
-                                             <th>Department Name</th>
-                                             <th>Employee Name</th>
-                                             <th>Employee Email</th>
-                                             <th>Employee Contact Number</th>
-                                             <th>Date of Joining</th>
-                                             <th>Action</th>
+                                             <th>NR</th>
+                                             <th>Departament</th>
+                                             <th>Angajat</th>
+                                             <th>Email</th>
+                                             <th>Numar de telefon</th>
+                                             <th>Data inregistrarii</th>
+                                             <th>Actiuni</th>
                                           </tr>
                                        </thead>
                                        <tbody>

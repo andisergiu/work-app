@@ -62,7 +62,7 @@ $query->execute();
                      <div class="row column_title">
                         <div class="col-md-12">
                            <div class="page_title">
-                              <h2>Manage Employee</h2>
+                              <h2>Manage Anagajti</h2>
                            </div>
                         </div>
                      </div>
@@ -74,12 +74,12 @@ $query->execute();
                            <div class="white_shd full margin_bottom_30">
                               <div class="full graph_head">
                                  <div class="heading1 margin_0">
-                                    <h2>Search Employee</h2>
+                                    <h2>Cauta Angajati</h2>
                                  </div>
                               </div>
                               
                               <div class="table_section padding_infor_info">
-                                 <h4>Search Employee by Employee ID. </h4>
+                                 <h4>Cauta angajati dupa ID </h4>
                  <br>
                <form id="basic-form" method="post">
                                 <div class="form-group">
@@ -87,7 +87,7 @@ $query->execute();
                                     <input id="searchdata" type="text" name="searchdata" required="true" class="form-control" placeholder="Enter Employee ID"></div>
                                 
                               
-                                <button type="submit" class="btn btn-primary" name="search" id="submit">Search</button>
+                                <button type="submit" class="btn btn-primary" name="search" id="submit">Cauta</button>
                             </form>
                                  <div class="table-responsive-sm">
                                     <?php
@@ -100,14 +100,14 @@ $sdata=$_POST['searchdata'];
                                     <table class="table table-bordered">
                                        <thead>
                                           <tr>
-                                             <th>S.No</th>
-                                             <th>Department Name</th>
-                                             <th>Employee Name</th>
-                                             <th>Employee ID</th>
-                                             <th>Employee Email</th>
-                                             <th>Employee Contact Number</th>
-                                             <th>Date of Joining</th>
-                                             <th>Action</th>
+                                             <th>NR</th>
+                                             <th>Departament</th>
+                                             <th>Angajat</th>
+                                             <th>ID</th>
+                                             <th>Email</th>
+                                             <th>Numar de telefon</th>
+                                             <th>Data inregistrarii</th>
+                                             <th>Actiuni</th>
                                           </tr>
                                        </thead>
                                        <tbody>
@@ -138,7 +138,7 @@ foreach($results as $row)
 $cnt=$cnt+1;
 } } else { ?>
   <tr>
-    <td colspan="8"> No record found against this search</td>
+    <td colspan="8"> Din pacate nu am gasit inregistrari.</td>
 
   </tr>
   <?php } }?>
