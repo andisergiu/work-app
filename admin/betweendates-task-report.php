@@ -32,7 +32,7 @@ echo "<script>window.location.href ='add-dept.php'</script>";
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <title>Employee Task Management System || Between Dates Task Reports</title>
+      <title>WORK TASK NEXTLAB.TECH</title>
     
       <link rel="stylesheet" href="css/bootstrap.min.css" />
       <!-- site css -->

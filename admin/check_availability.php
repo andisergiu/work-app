@@ -12,9 +12,9 @@ $query-> execute();
 $results = $query -> fetchAll(PDO::FETCH_OBJ);
  
 if($query -> rowCount() > 0)
-echo "<span style='color:red'> Employee Id already assign to another employee.</span>";
+echo "<span style='color:red'> ID-ul este deja inregistrat unui angajat</span>";
 else
- echo "<span style='color:green'> Employee Id avaialble for registration.</span>";
+ echo "<span style='color:green'> ID valabil /span>";
  
 }
 
@@ -28,9 +28,9 @@ $query-> execute();
 $results = $query -> fetchAll(PDO::FETCH_OBJ);
  
 if($query -> rowCount() > 0)
-echo "<span style='color:red'> Email id already registered with another employee.</span>";
+echo "<span style='color:red'> Email-ul este deja inregistrat unui angajat</span>";
 else
- echo "<span style='color:green'> Email Id avaialble for registration.</span>";
+ echo "<span style='color:green'> Email valabil </span>";
  
 }
 
@@ -44,8 +44,8 @@ $query-> execute();
 $results = $query -> fetchAll(PDO::FETCH_OBJ);
  
 if($query -> rowCount() > 0)
-echo "<span style='color:red'> Contact Number already registered with another employee.</span>";
+echo "<span style='color:red'> Numarul de telefon este deja inregistrat unui angajat</span>";
 else
- echo "<span style='color:green'> Contact Number avaialble for registration.</span>";
+ echo "<span style='color:green'> Numar de telefon valabil </span>";
  
 }

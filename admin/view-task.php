@@ -12,7 +12,7 @@ if (strlen($_SESSION['etmsaid']==0)) {
 <html lang="en">
    <head>
       
-      <title>Employee Task Management System || View New Task</title>
+      <title>WORK TASK NEXTLAB.TECH</title>
    
       <link rel="stylesheet" href="css/bootstrap.min.css" />
       <!-- site css --><!-- -->

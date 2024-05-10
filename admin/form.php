@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <title>Pluto - Responsive Bootstrap Admin Panel Templates</title>
+      <title>WORK TASK NEXTLAB.TECH</title>
     
       <link rel="stylesheet" href="css/bootstrap.min.css" />
       <!-- site css --><!-- -->

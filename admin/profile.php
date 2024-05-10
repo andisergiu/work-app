@@ -28,7 +28,7 @@ $query->execute();
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <title>Employee Task Management System || Profile</title>
+      <title>WORK TASK NEXTLAB.TECH</title>
     
       <link rel="stylesheet" href="css/bootstrap.min.css" />
       <!-- site css --><!-- -->
@@ -64,7 +64,7 @@ $query->execute();
                      <div class="row column_title">
                         <div class="col-md-12">
                            <div class="page_title">
-                              <h2>Admin Profile</h2>
+                              <h2>Profil Admin</h2>
                            </div>
                         </div>
                      </div>
@@ -75,7 +75,7 @@ $query->execute();
                            <div class="white_shd full margin_bottom_30">
                               <div class="full graph_head">
                                  <div class="heading1 margin_0">
-                                    <h2>Profile</h2>
+                                    <h2>Profil</h2>
                                  </div>
                               </div>
                               <div class="full progress_bar_inner">
@@ -88,27 +88,27 @@ $query->execute();
                         <fieldset>
                             <?php
 
-$sql="SELECT * from  tbladmin";
-$query = $dbh -> prepare($sql);
-$query->execute();
-$results=$query->fetchAll(PDO::FETCH_OBJ);
-$cnt=1;
-if($query->rowCount() > 0)
-{
-foreach($results as $row)
-{               ?>
+                              $sql="SELECT * from  tbladmin";
+                              $query = $dbh -> prepare($sql);
+                              $query->execute();
+                              $results=$query->fetchAll(PDO::FETCH_OBJ);
+                              $cnt=1;
+                              if($query->rowCount() > 0)
+                              {
+                              foreach($results as $row)
+                              {               ?>
                            <div class="field">
-                              <label class="label_field">Admin Name</label>
+                              <label class="label_field">Nume</label>
                               <input type="text" name="adminname" value="<?php  echo $row->AdminName;?>" class="form-control" required='true'>
                            </div>
                            <br>
                            <div class="field">
-                              <label class="label_field">User Name</label>
+                              <label class="label_field">Utilizator</label>
                               <input type="text" name="username" value="<?php  echo $row->UserName;?>" class="form-control" readonly="">
                            </div>
                            <br>
                            <div class="field">
-                              <label class="label_field">Contact Number</label>
+                              <label class="label_field">Telefon</label>
                               <input type="text" name="mobilenumber" value="<?php  echo $row->MobileNumber;?>"  class="form-control" maxlength='10' required='true' pattern="[0-9]+">
                            </div>
                            <br>
@@ -118,7 +118,7 @@ foreach($results as $row)
                            </div>
                            <br>
                            <div class="field">
-                              <label class="label_field">Admin Registration Date</label>
+                              <label class="label_field">Data inregistrare</label>
                               <input type="text" name="" value="<?php  echo $row->AdminRegdate;?>" readonly="" class="form-control">
                            </div>
                            <?php $cnt=$cnt+1;}} ?>

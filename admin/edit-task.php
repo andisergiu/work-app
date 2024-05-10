@@ -32,7 +32,7 @@ $query->bindParam(':eid',$eid,PDO::PARAM_STR);
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <title>Employee Task Management System || Update Task</title>
+      <title>WORK TASK NEXTLAB.TECH</title>
     
       <link rel="stylesheet" href="css/bootstrap.min.css" />
       <!-- site css -->

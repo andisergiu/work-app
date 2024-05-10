@@ -6,7 +6,7 @@ $deptid=$_POST["deptid"];
 $sql=$dbh->prepare("SELECT * FROM tblemployee WHERE DepartmentID=:deptid");
 $sql->execute(array(':deptid' => $deptid));	
 ?>
-<option value="">Select Employee</option>
+<option value="">Selecteaza Angajat</option>
 <?php
 while($row =$sql->fetch())
 {

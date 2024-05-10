@@ -42,7 +42,7 @@ echo "<script>window.location.href ='add-task.php'</script>";
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <title>Employee Task Management System || Add Task</title>
+      <title>WORK TASK NEXTLAB.TECH</title>
     
       <link rel="stylesheet" href="css/bootstrap.min.css" />
       <!-- site css -->
@@ -119,13 +119,13 @@ $("#emplist").html(data);
                                  <option value="">Select Department</option>
                                   <?php 
 
-$sql2 = "SELECT * from   tbldepartment ";
-$query2 = $dbh -> prepare($sql2);
-$query2->execute();
-$result2=$query2->fetchAll(PDO::FETCH_OBJ);
+                                    $sql2 = "SELECT * from   tbldepartment ";
+                                    $query2 = $dbh -> prepare($sql2);
+                                    $query2->execute();
+                                    $result2=$query2->fetchAll(PDO::FETCH_OBJ);
 
-foreach($result2 as $row2)
-{          
+                                    foreach($result2 as $row2)
+                                    {          
     ?>  
    
 <option value="<?php echo htmlentities($row2->ID);?>"><?php echo htmlentities($row2->DepartmentName
@@ -199,7 +199,7 @@ foreach($result2 as $row2)
     
       </div>
       <!-- jQuery -->
-      <script src="https://code.jquery.com/jquery-3.1.1.min.js">
+      <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
       <script src="js/jquery.min.js"></script>
       <script src="js/popper.min.js"></script>
       <script src="js/bootstrap.min.js"></script>

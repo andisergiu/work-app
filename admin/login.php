@@ -64,46 +64,43 @@ echo "<script>alert('Invalid Details');</script>";
    
    </head>
    <body class="inner_page login">
-      <!-- header -->
-	<?php include_once('includes/header.php');?>
       <div class="full_container">
          <div class="container">
             <div class="center verticle_center full_height">
                <div class="login_section">
                   <div class="logo_login">
                      <div class="center">
-                        <h3 style="color: white;">Employee Task Management System</h3>
+                        <h3 style="color: white;">WORK TASK NEXTLAB.TECH</h3>
                      </div>
                   </div>
                   <div class="login_form">
                      <form method="post" name="login">
                         <fieldset>
                            <div class="field">
-                              <label class="label_field">User Name</label>
-                              <input type="text" class="form-control" placeholder="enter your username" required="true" name="username" value="<?php if(isset($_COOKIE["user_login"])) { echo $_COOKIE["user_login"]; } ?>" >
+                              <label class="label_field">Utilizator</label>
+                              <input type="text" class="form-control" placeholder="adauga utilizatorul" required="true" name="username" value="<?php if(isset($_COOKIE["user_login"])) { echo $_COOKIE["user_login"]; } ?>" >
                            </div>
                            <div class="field">
-                              <label class="label_field">Password</label>
-                              <input type="password" class="form-control" placeholder="enter your password" name="password" required="true" value="<?php if(isset($_COOKIE["userpassword"])) { echo $_COOKIE["userpassword"]; } ?>">
+                              <label class="label_field">Parola</label>
+                              <input type="password" class="form-control" placeholder="adauga parola" name="password" required="true" value="<?php if(isset($_COOKIE["userpassword"])) { echo $_COOKIE["userpassword"]; } ?>">
                            </div>
                            <div class="field">
                               <label class="label_field hidden">hidden label</label>
                               <label class="form-check-label"><input class="form-check-input" id="remember" name="remember" <?php if(isset($_COOKIE["user_login"])) { ?> checked <?php } ?> type="checkbox"/> Remember Me</label>
-                              <a class="forgot" href="forgot-password.php">Forgotten Password?</a>
+                              <a class="forgot" href="forgot-password.php">Ai uitat parola?</a>
                            </div>
                            <div class="field margin_0">
                               <label class="label_field hidden">hidden label</label>
                               <button class="main_bt" name="login" type="submit">Login</button>
                            </div>
                         </fieldset>
-                        <a class="forgot" href="../index.php">Home Page</a>
+                        <a class="forgot" href="../index.php">Pagina principala</a>
                      </form>
                   </div>
                </div>
             </div>
          </div>
       </div>
-      <?php include_once('includes/footer.php');?>
       <!-- jQuery -->
       <script src="js/jquery.min.js"></script>
       <script src="js/popper.min.js"></script>

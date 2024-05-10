@@ -83,7 +83,7 @@ echo "<script>window.location.href ='add-employee.php'</script>";
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <title>Employee Task Management System || Add Department</title>
+      <title>WORK TASK NEXTLAB.TECH</title>
     
       <link rel="stylesheet" href="css/bootstrap.min.css" />
       <!-- site css -->
@@ -310,7 +310,7 @@ foreach($result2 as $row2)
     
       </div>
       <!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.1.1.min.js">
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
       <script src="js/jquery.min.js"></script>
       <script src="js/popper.min.js"></script>
       <script src="js/bootstrap.min.js"></script>

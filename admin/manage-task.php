@@ -25,7 +25,7 @@ $query->execute();
 <html lang="en">
    <head>
       
-      <title>Employee Task Management System || Manage Task</title>
+      <title>WORK TASK NEXTLAB.TECH</title>
    
       <link rel="stylesheet" href="css/bootstrap.min.css" />
       <!-- site css -->

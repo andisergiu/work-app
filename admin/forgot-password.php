@@ -34,7 +34,7 @@ echo "<script>alert('Email id or Mobile no is invalid');</script>";
 <html lang="en">
    <head>
     
-      <title>Employee Task Management System || Forgot Page</title>
+      <title>WORK TASK NEXTLAB.TECH</title>
      
       <link rel="stylesheet" href="css/bootstrap.min.css" />
       <!-- site css --><!-- -->

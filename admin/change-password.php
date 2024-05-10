@@ -36,7 +36,7 @@ echo '<script>alert("Your current password is wrong")</script>';
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <title>Employee Task Management System || Change Password</title>
+      <title>WORK TASK NEXTLAB.TECH</title>
     
       <link rel="stylesheet" href="css/bootstrap.min.css" />
       <!-- site css --><!-- -->
