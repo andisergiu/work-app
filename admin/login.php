@@ -44,7 +44,7 @@ echo "<script>alert('Invalid Details');</script>";
 <html lang="en">
    <head>
     
-      <title>Employee Task Management System || Login Page</title>
+   <title>WORK TASK NEXTLAB.TECH</title>
      
       <link rel="stylesheet" href="css/bootstrap.min.css" />
       <!-- site css -->
@@ -64,6 +64,8 @@ echo "<script>alert('Invalid Details');</script>";
    
    </head>
    <body class="inner_page login">
+      <!-- header -->
+	<?php include_once('includes/header.php');?>
       <div class="full_container">
          <div class="container">
             <div class="center verticle_center full_height">
@@ -101,6 +103,7 @@ echo "<script>alert('Invalid Details');</script>";
             </div>
          </div>
       </div>
+      <?php include_once('includes/footer.php');?>
       <!-- jQuery -->
       <script src="js/jquery.min.js"></script>
       <script src="js/popper.min.js"></script>
